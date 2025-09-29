@@ -1,0 +1,51 @@
+[2025-04-18T17:28:25.760+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-18T17:28:25.791+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transaction_dag.get_data_task manual__2025-04-18T17:26:59.653863+00:00 [queued]>
+[2025-04-18T17:28:25.812+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transaction_dag.get_data_task manual__2025-04-18T17:26:59.653863+00:00 [queued]>
+[2025-04-18T17:28:25.813+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 2
+[2025-04-18T17:28:25.841+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): get_data_task> on 2025-04-18 17:26:59.653863+00:00
+[2025-04-18T17:28:25.849+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=458) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-18T17:28:25.850+0000] {standard_task_runner.py:72} INFO - Started process 459 to run task
+[2025-04-18T17:28:25.852+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'transaction_dag', 'get_data_task', 'manual__2025-04-18T17:26:59.653863+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/transaction_dag.py', '--cfg-path', '/tmp/tmp86qw6aci']
+[2025-04-18T17:28:25.854+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask get_data_task
+[2025-04-18T17:28:25.924+0000] {task_command.py:467} INFO - Running <TaskInstance: transaction_dag.get_data_task manual__2025-04-18T17:26:59.653863+00:00 [running]> on host 317bb80a77ef
+[2025-04-18T17:28:26.044+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='transaction_dag' AIRFLOW_CTX_TASK_ID='get_data_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T17:26:59.653863+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-18T17:26:59.653863+00:00'
+[2025-04-18T17:28:26.046+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-18T17:28:26.111+0000] {logging_mixin.py:190} INFO - Data fetched from customers table: [{'customer_id': 'C1', 'customer_name': 'Michelle Garcia', 'gender': 'Female', 'age': 30, 'province': 'DI Yogyakarta', 'city': 'Yogyakarta'}, {'customer_id': 'C2', 'customer_name': 'Timothy Matthews', 'gender': 'Male', 'age': 63, 'province': 'Banten', 'city': 'Pandeglang'}, {'customer_id': 'C3', 'customer_name': 'Judy Bailey', 'gender': 'Female', 'age': 18, 'province': 'Jawa Barat', 'city': 'Tasikmalaya'}, {'customer_id': 'C4', 'customer_name': 'Rachel Houston', 'gender': 'Female', 'age': 20, 'province': 'Jawa Barat', 'city': 'Sukabumi'}, {'customer_id': 'C5', 'customer_name': 'Jessica Andrade', 'gender': 'Male', 'age': 35, 'province': 'Jawa Barat', 'city': 'Ciamis'}]
+[2025-04-18T17:28:26.112+0000] {logging_mixin.py:190} INFO - key: customer_id - value: C1
+[2025-04-18T17:28:26.112+0000] {logging_mixin.py:190} INFO - key: customer_name - value: Michelle Garcia
+[2025-04-18T17:28:26.113+0000] {logging_mixin.py:190} INFO - key: gender - value: Female
+[2025-04-18T17:28:26.114+0000] {logging_mixin.py:190} INFO - key: age - value: 30
+[2025-04-18T17:28:26.114+0000] {logging_mixin.py:190} INFO - key: province - value: DI Yogyakarta
+[2025-04-18T17:28:26.115+0000] {logging_mixin.py:190} INFO - key: city - value: Yogyakarta
+[2025-04-18T17:28:26.115+0000] {logging_mixin.py:190} INFO - key: customer_id - value: C2
+[2025-04-18T17:28:26.115+0000] {logging_mixin.py:190} INFO - key: customer_name - value: Timothy Matthews
+[2025-04-18T17:28:26.116+0000] {logging_mixin.py:190} INFO - key: gender - value: Male
+[2025-04-18T17:28:26.116+0000] {logging_mixin.py:190} INFO - key: age - value: 63
+[2025-04-18T17:28:26.117+0000] {logging_mixin.py:190} INFO - key: province - value: Banten
+[2025-04-18T17:28:26.118+0000] {logging_mixin.py:190} INFO - key: city - value: Pandeglang
+[2025-04-18T17:28:26.119+0000] {logging_mixin.py:190} INFO - key: customer_id - value: C3
+[2025-04-18T17:28:26.119+0000] {logging_mixin.py:190} INFO - key: customer_name - value: Judy Bailey
+[2025-04-18T17:28:26.120+0000] {logging_mixin.py:190} INFO - key: gender - value: Female
+[2025-04-18T17:28:26.121+0000] {logging_mixin.py:190} INFO - key: age - value: 18
+[2025-04-18T17:28:26.122+0000] {logging_mixin.py:190} INFO - key: province - value: Jawa Barat
+[2025-04-18T17:28:26.123+0000] {logging_mixin.py:190} INFO - key: city - value: Tasikmalaya
+[2025-04-18T17:28:26.125+0000] {logging_mixin.py:190} INFO - key: customer_id - value: C4
+[2025-04-18T17:28:26.126+0000] {logging_mixin.py:190} INFO - key: customer_name - value: Rachel Houston
+[2025-04-18T17:28:26.126+0000] {logging_mixin.py:190} INFO - key: gender - value: Female
+[2025-04-18T17:28:26.127+0000] {logging_mixin.py:190} INFO - key: age - value: 20
+[2025-04-18T17:28:26.128+0000] {logging_mixin.py:190} INFO - key: province - value: Jawa Barat
+[2025-04-18T17:28:26.128+0000] {logging_mixin.py:190} INFO - key: city - value: Sukabumi
+[2025-04-18T17:28:26.129+0000] {logging_mixin.py:190} INFO - key: customer_id - value: C5
+[2025-04-18T17:28:26.129+0000] {logging_mixin.py:190} INFO - key: customer_name - value: Jessica Andrade
+[2025-04-18T17:28:26.130+0000] {logging_mixin.py:190} INFO - key: gender - value: Male
+[2025-04-18T17:28:26.130+0000] {logging_mixin.py:190} INFO - key: age - value: 35
+[2025-04-18T17:28:26.131+0000] {logging_mixin.py:190} INFO - key: province - value: Jawa Barat
+[2025-04-18T17:28:26.131+0000] {logging_mixin.py:190} INFO - key: city - value: Ciamis
+[2025-04-18T17:28:26.132+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-18T17:28:26.146+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-18T17:28:26.147+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=transaction_dag, task_id=get_data_task, run_id=manual__2025-04-18T17:26:59.653863+00:00, execution_date=20250418T172659, start_date=20250418T172825, end_date=20250418T172826
+[2025-04-18T17:28:26.241+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-18T17:28:26.265+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-18T17:28:26.269+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

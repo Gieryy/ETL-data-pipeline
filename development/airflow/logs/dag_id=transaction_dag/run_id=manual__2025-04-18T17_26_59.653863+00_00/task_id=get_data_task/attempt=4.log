@@ -1,0 +1,26 @@
+[2025-04-18T17:35:11.450+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-18T17:35:11.478+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transaction_dag.get_data_task manual__2025-04-18T17:26:59.653863+00:00 [queued]>
+[2025-04-18T17:35:11.492+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transaction_dag.get_data_task manual__2025-04-18T17:26:59.653863+00:00 [queued]>
+[2025-04-18T17:35:11.494+0000] {taskinstance.py:2867} INFO - Starting attempt 4 of 4
+[2025-04-18T17:35:11.510+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): get_data_task> on 2025-04-18 17:26:59.653863+00:00
+[2025-04-18T17:35:11.517+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=548) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-18T17:35:11.519+0000] {standard_task_runner.py:72} INFO - Started process 549 to run task
+[2025-04-18T17:35:11.519+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'transaction_dag', 'get_data_task', 'manual__2025-04-18T17:26:59.653863+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/transaction_dag.py', '--cfg-path', '/tmp/tmpf6erldfj']
+[2025-04-18T17:35:11.520+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask get_data_task
+[2025-04-18T17:35:11.576+0000] {task_command.py:467} INFO - Running <TaskInstance: transaction_dag.get_data_task manual__2025-04-18T17:26:59.653863+00:00 [running]> on host 317bb80a77ef
+[2025-04-18T17:35:11.690+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='transaction_dag' AIRFLOW_CTX_TASK_ID='get_data_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T17:26:59.653863+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-18T17:26:59.653863+00:00'
+[2025-04-18T17:35:11.692+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-18T17:35:11.759+0000] {logging_mixin.py:190} INFO - Data fetched from customers table: [{'customer_id': 'C1', 'customer_name': 'Michelle Garcia', 'gender': 'Female', 'age': 30, 'province': 'DI Yogyakarta', 'city': 'Yogyakarta'}, {'customer_id': 'C2', 'customer_name': 'Timothy Matthews', 'gender': 'Male', 'age': 63, 'province': 'Banten', 'city': 'Pandeglang'}, {'customer_id': 'C3', 'customer_name': 'Judy Bailey', 'gender': 'Female', 'age': 18, 'province': 'Jawa Barat', 'city': 'Tasikmalaya'}, {'customer_id': 'C4', 'customer_name': 'Rachel Houston', 'gender': 'Female', 'age': 20, 'province': 'Jawa Barat', 'city': 'Sukabumi'}, {'customer_id': 'C5', 'customer_name': 'Jessica Andrade', 'gender': 'Male', 'age': 35, 'province': 'Jawa Barat', 'city': 'Ciamis'}]
+[2025-04-18T17:35:11.769+0000] {logging_mixin.py:190} INFO - Inserted data into new_customers: C1 - Michelle Garcia
+[2025-04-18T17:35:11.774+0000] {logging_mixin.py:190} INFO - Inserted data into new_customers: C2 - Timothy Matthews
+[2025-04-18T17:35:11.779+0000] {logging_mixin.py:190} INFO - Inserted data into new_customers: C3 - Judy Bailey
+[2025-04-18T17:35:11.782+0000] {logging_mixin.py:190} INFO - Inserted data into new_customers: C4 - Rachel Houston
+[2025-04-18T17:35:11.785+0000] {logging_mixin.py:190} INFO - Inserted data into new_customers: C5 - Jessica Andrade
+[2025-04-18T17:35:11.785+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-18T17:35:11.797+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-18T17:35:11.798+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=transaction_dag, task_id=get_data_task, run_id=manual__2025-04-18T17:26:59.653863+00:00, execution_date=20250418T172659, start_date=20250418T173511, end_date=20250418T173511
+[2025-04-18T17:35:11.867+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-18T17:35:11.892+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-18T17:35:11.895+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
